@@ -9,17 +9,17 @@
 </p>
 
 <p align="center">
-  <b>Re-Tube</b> (Restore YouTube) keeps YouTube's classic watch page and adds the small tools YouTube never did.
+  <b>Re-Tube</b> (Restore YouTube) restores YouTube's classic watch layout and adds power-user tools for comments, feeds, and subscriptions.
 </p>
 
 ## ✨ Highlights
 
-- 🎬 **Classic layout.** Description and comments under the video, recommendations on the right.
-- 🎨 **Presets.** Performance, Balanced or Beauty in one click, then fine-tune anything.
-- 📺 **Subscriptions window.** Every channel in one searchable grid, new videos first.
-- ⌨️ **Command palette.** <kbd>Ctrl</kbd>+<kbd>K</kbd> finds any setting or action by name.
-- 💬 **Comment tools.** Creator, pinned and hearted highlights, Top and Popular chips, search, spam filter.
-- 🛡️ **Clean feeds.** Hide Shorts, Playables and shelves you do not use; a grid that fits your window.
+- 🎬 **Classic layout:** description and comments under the video, recommendations on the right.
+- 🎨 **Presets:** switch between Performance, Balanced, or Beauty in one click, then fine-tune anything.
+- 📺 **Subscriptions window:** view every channel in one searchable grid, sorted by latest uploads.
+- ⌨️ **Command palette:** press <kbd>Ctrl</kbd>+<kbd>K</kbd> to jump to any setting or action.
+- 💬 **Comment tools:** highlight creator, pinned, and hearted comments; filter by Top, Popular, search, or spam.
+- 🛡️ **Clean feeds:** hide Shorts, Playables, and unused shelves with a responsive video grid.
 
 <p align="center">
   <img src="docs/src/assets/screens/watch-dark.png" alt="A watch page with Re-Tube: comments under the video with creator and hearted highlights, Top and Popular chips, recommendations on the right" width="100%">
@@ -61,7 +61,7 @@ just e2e-setup   # install Playwright browsers (once)
 just ci          # lint, types, tests, build, docs
 ```
 
-See [Architecture](https://kyarick.github.io/re-tube/dev/architecture/) before you add a feature.
+Read the [Architecture guide](https://kyarick.github.io/re-tube/dev/architecture/) before adding a feature.
 
 ## 📄 License
 
