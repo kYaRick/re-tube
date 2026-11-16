@@ -1,0 +1,99 @@
+---
+title: Встановлення
+description: Встановлення Re-Tube у Violentmonkey, Tampermonkey або в Custom script розширення Enhancer for YouTube.
+---
+
+import { Aside, Steps, TabItem, Tabs } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import enhancer from '../../../assets/screens/enhancer-custom-script.png';
+
+Re-Tube (Restore YouTube) - це userscript. Він працює в будь-якому з цих розширень:
+
+| Розширення | Автооновлення | Кому підходить |
+| --- | --- | --- |
+| [Violentmonkey](https://violentmonkey.github.io/) | Так | Firefox, open source |
+| [Tampermonkey](https://www.tampermonkey.net/) | Так | Chrome, Edge, Safari |
+| [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube) | Ні | Ви вже користуєтесь Enhancer і не хочете друге розширення |
+
+<Aside type="caution" title="Лише одна копія">
+Увімкніть Re-Tube лише в одному розширенні. Дві копії на одній сторінці конфліктують, і layout та вікно налаштувань працюють неправильно.
+</Aside>
+
+## 🚀 Кроки
+
+<Tabs syncKey="host">
+<TabItem label="Violentmonkey">
+
+<Steps>
+
+1. Встановіть [Violentmonkey](https://violentmonkey.github.io/) для свого браузера.
+2. Відкрийте [retube.user.js](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js).
+3. Підтвердіть встановлення у Violentmonkey.
+4. Відкрийте будь-яку сторінку YouTube і натисніть <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd>, щоб відкрити вікно налаштувань.
+
+</Steps>
+
+</TabItem>
+<TabItem label="Tampermonkey">
+
+<Steps>
+
+1. Встановіть [Tampermonkey](https://www.tampermonkey.net/) для свого браузера.
+2. Відкрийте [retube.user.js](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js).
+3. Натисніть **Install** на сторінці Tampermonkey.
+4. Відкрийте будь-яку сторінку YouTube і натисніть <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd>, щоб відкрити вікно налаштувань.
+
+</Steps>
+
+<Aside type="tip" title="Chrome і Edge">
+Якщо скрипт не запускається, відкрийте сторінку деталей Tampermonkey у списку розширень браузера і увімкніть **Allow User Scripts** (або **Developer mode**). Tampermonkey показує повідомлення, коли це потрібно.
+</Aside>
+
+</TabItem>
+<TabItem label="Enhancer for YouTube">
+
+<Steps>
+
+1. Відкрийте [retube.user.js](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js) і скопіюйте весь текст.
+2. Відкрийте налаштування Enhancer for YouTube, розділ **Custom script**.
+3. Вставте текст у поле і натисніть **Save**.
+4. Позначте **Automatically execute the script when YouTube is loaded in a tab**.
+5. Перезавантажте вкладки YouTube, які вже відкриті. Скрипт працює з наступного завантаження сторінки.
+6. Натисніть <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd>, щоб відкрити вікно налаштувань.
+
+</Steps>
+
+<Image src={enhancer} alt="Картка Custom script у налаштуваннях Enhancer for YouTube з кодом Re-Tube і увімкненим автоматичним запуском" />
+
+<Aside type="caution" title="Без автооновлення">
+Enhancer зберігає копію коду. Коли виходить нова версія Re-Tube, вставте новий `retube.user.js` і натисніть **Save**. Налаштування зберігаються.
+</Aside>
+
+<Aside type="note" title="Попередження безпеки">
+Enhancer показує червоне попередження на цій картці. Re-Tube має відкритий код: ви можете прочитати його на [GitHub](https://github.com/kYaRick/kya.retube) перед тим, як вставити.
+</Aside>
+
+</TabItem>
+</Tabs>
+
+## 🔄 Оновлення
+
+Violentmonkey і Tampermonkey перевіряють сторінку GitHub Releases і встановлюють нові версії автоматично. В Enhancer for YouTube вставте нову версію вручну.
+
+## 🔀 Зміна розширення
+
+Усі розширення зберігають налаштування в одному місці на youtube.com, тому після зміни вони залишаються. Спочатку вимкніть скрипт у старому розширенні, потім встановіть у новому.
+
+## ⬆️ Перехід з "YouTube Classic+"
+
+Re-Tube має той самий namespace, тому Violentmonkey і Tampermonkey замінюють старий скрипт. Налаштування зберігаються, бо Re-Tube читає той самий ключ сховища.
+
+Якщо ви бачите два скрипти, вимкніть "YouTube Classic+". Дві копії на одній сторінці разом не працюють.
+
+## ⚙️ Як він працює
+
+Re-Tube не потребує спеціальних дозволів (`@grant none`). Він працює в контексті сторінки (`@inject-into page`) на `document-start` і зберігає налаштування в `localStorage` сайту youtube.com.
+
+## 🧩 Розширення браузера
+
+Розширення для Chrome і Firefox заплановане. Дивіться [план розвитку](../roadmap/).

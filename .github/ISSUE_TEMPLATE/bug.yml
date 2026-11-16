@@ -1,0 +1,31 @@
+name: Bug report
+description: Something on YouTube looks wrong or a feature does not work
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected and what you saw. Add a screenshot if you can.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page
+      placeholder: https://www.youtube.com/watch?v=...
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and userscript manager
+      placeholder: Firefox 144, Violentmonkey 2.31
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Open the settings panel (Alt+Shift+Y), go to "Backup & diagnostics", press "Copy diagnostics" and paste the report here.
+      render: json
+    validations:
+      required: true

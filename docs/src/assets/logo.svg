@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Re-Tube">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1d3a"/>
+      <stop offset="1" stop-color="#0c0d1c"/>
+    </linearGradient>
+    <linearGradient id="tube" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5cb3ff"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".3" cy=".25" r=".8">
+      <stop offset="0" stop-color="#5cb3ff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#5cb3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="url(#bg)"/>
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="url(#glow)"/>
+  <!-- the tube: a thick pipe that loops back ("re") and ends in a play-shaped nozzle -->
+  <path d="M 62 30 A 34 34 0 1 0 96 64" fill="none" stroke="#06070f" stroke-opacity=".45" stroke-width="22" stroke-linecap="round" transform="translate(2 3)"/>
+  <path d="M 62 30 A 34 34 0 1 0 96 64" fill="none" stroke="url(#tube)" stroke-width="20" stroke-linecap="round"/>
+  <!-- highlight along the pipe for volume -->
+  <path d="M 58 34 A 30 30 0 0 0 36 52" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+  <!-- nozzle: the pipe opens into a play triangle -->
+  <path d="M 62 16 L 92 30 L 62 44 Z" fill="url(#tube)" stroke="url(#tube)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M 66 24 L 78 30 L 66 36 Z" fill="#fff"/>
+  <!-- play in the middle of the loop -->
+  <path d="M 56 54 L 76 64 L 56 74 Z" fill="#fff" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+</svg>

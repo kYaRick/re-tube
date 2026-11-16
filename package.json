@@ -1,0 +1,37 @@
+{
+  "name": "retube",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Classic YouTube watch layout with Fluent-style cards, comment tools, feed clean-up and a responsive grid",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kYaRick/kya.retube.git"
+  },
+  "workspaces": [
+    "docs"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "check": "biome check . && tsc --noEmit && bun scripts/check-css-classes.ts",
+    "format": "biome check --write .",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "icons": "bun scripts/icons.ts",
+    "docs:dev": "bun run --cwd docs dev",
+    "docs:build": "bun run --cwd docs build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.3",
+    "@playwright/test": "^1.64.1",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^24.0.0",
+    "happy-dom": "^21.0.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-monkey": "^8.1.1",
+    "vitest": "^5.0.5"
+  }
+}

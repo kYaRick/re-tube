@@ -1,0 +1,6 @@
+// YouTube enforces Trusted Types: build DOM with h() and icon() instead of HTML strings
+or {
+  `$obj.innerHTML = $value`,
+  `$obj.outerHTML = $value`,
+  `$obj.insertAdjacentHTML($pos, $value)`
+} where { register_diagnostic(span=$obj, message="Do not use HTML strings. Build DOM with h() and icon().") }

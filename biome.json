@@ -1,0 +1,19 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": {
+    "includes": ["**", "!legacy", "!dist", "!docs/.astro", "!docs/dist", "!**/*.md", "!**/*.mdx"]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 110
+  },
+  "javascript": {
+    "formatter": { "quoteStyle": "single", "semicolons": "always" }
+  },
+  "linter": {
+    "rules": { "preset": "recommended" }
+  },
+  "plugins": ["./biome/no-inner-html.grit"]
+}

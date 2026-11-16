@@ -1,0 +1,53 @@
+/* Brand colours from assets/logo.svg */
+:root {
+  --sl-color-accent-low: #1e1b4b;
+  --sl-color-accent: #7c3aed;
+  --sl-color-accent-high: #c4b5fd;
+}
+:root[data-theme="light"] {
+  --sl-color-accent-low: #ede9fe;
+  --sl-color-accent: #6d28d9;
+  --sl-color-accent-high: #2e1065;
+}
+
+/* Responsive unified screenshots & banners */
+.sl-markdown-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  border-radius: 10px;
+  border: 1px solid var(--sl-color-hairline-light);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+:root[data-theme="light"] .sl-markdown-content img {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Styled keyboard shortcut keys */
+.sl-markdown-content kbd {
+  display: inline-block;
+  padding: 0.15em 0.45em;
+  font-size: 0.85em;
+  font-family: var(--sl-font-mono);
+  line-height: 1.2;
+  color: var(--sl-color-text);
+  background-color: var(--sl-color-bg-nav);
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--sl-color-hairline);
+  vertical-align: middle;
+}
+
+/* Subtle interactive polish for cards */
+.sl-link-card,
+article.card {
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.sl-link-card:hover {
+  transform: translateY(-2px);
+}

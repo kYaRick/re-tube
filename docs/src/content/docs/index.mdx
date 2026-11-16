@@ -1,0 +1,60 @@
+---
+title: Re-Tube
+description: The classic YouTube, refined. A userscript with the classic watch page, presets, a subscriptions window and a command palette.
+template: splash
+hero:
+  title: Re-Tube
+  tagline: The classic YouTube, refined. Classic watch page, clean feeds, and the small tools YouTube never added.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Install
+      link: install/
+      icon: right-arrow
+    - text: See the features
+      link: features/
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/kYaRick/kya.retube
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import settings from '../../assets/screens/settings-dark.png';
+import watch from '../../assets/screens/watch-dark.png';
+
+<CardGrid>
+  <Card title="Classic layout" icon="laptop">
+    Description and comments under the video, recommendations on the right. No side panels.
+  </Card>
+  <Card title="Presets" icon="rocket">
+    Performance, Balanced or Beauty in one click, then fine-tune anything.
+  </Card>
+  <Card title="Subscriptions window" icon="list-format">
+    Every channel in one searchable grid, new videos first.
+  </Card>
+  <Card title="Command palette" icon="magnifier">
+    <kbd>Ctrl</kbd>+<kbd>K</kbd> finds any setting or action by name.
+  </Card>
+  <Card title="Comment tools" icon="comment">
+    Creator, pinned and hearted highlights, popularity chips, search and a spam filter.
+  </Card>
+  <Card title="Clean feeds" icon="approve-check">
+    Hide Shorts, Playables and shelves you do not use. A grid that fits your window.
+  </Card>
+</CardGrid>
+
+## 🎬 The watch page, restored
+
+<Image src={watch} alt="A watch page with Re-Tube: comments under the video with creator and hearted highlights, recommendations on the right" />
+
+## ⚙️ One window for everything
+
+<Image src={settings} alt="The Re-Tube settings window" />
+
+<CardGrid>
+  <LinkCard title="Settings" href="settings/" description="Sections, search and shortcuts" />
+  <LinkCard title="Presets" href="presets/" description="What each preset turns on and off" />
+</CardGrid>

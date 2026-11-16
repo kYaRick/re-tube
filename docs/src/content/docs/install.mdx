@@ -1,0 +1,99 @@
+---
+title: Install
+description: Install Re-Tube in Violentmonkey, Tampermonkey or the Custom script of Enhancer for YouTube.
+---
+
+import { Aside, Steps, TabItem, Tabs } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import enhancer from '../../assets/screens/enhancer-custom-script.png';
+
+Re-Tube (Restore YouTube) is a userscript. It runs in any of these hosts:
+
+| Host | Auto-update | Best for |
+| --- | --- | --- |
+| [Violentmonkey](https://violentmonkey.github.io/) | Yes | Firefox, open source |
+| [Tampermonkey](https://www.tampermonkey.net/) | Yes | Chrome, Edge, Safari |
+| [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube) | No | You already use Enhancer and want no second extension |
+
+<Aside type="caution" title="One copy only">
+Turn on Re-Tube in one host only. Two copies on one page conflict, and the layout and the settings window do not work correctly.
+</Aside>
+
+## 🚀 Steps
+
+<Tabs syncKey="host">
+<TabItem label="Violentmonkey">
+
+<Steps>
+
+1. Install [Violentmonkey](https://violentmonkey.github.io/) for your browser.
+2. Open [retube.user.js](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js).
+3. Confirm the install in Violentmonkey.
+4. Open any YouTube page and press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> to open the settings window.
+
+</Steps>
+
+</TabItem>
+<TabItem label="Tampermonkey">
+
+<Steps>
+
+1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.
+2. Open [retube.user.js](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js).
+3. Press **Install** on the Tampermonkey page.
+4. Open any YouTube page and press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> to open the settings window.
+
+</Steps>
+
+<Aside type="tip" title="Chrome and Edge">
+If the script does not run, open the Tampermonkey details page in the browser extensions list and turn on **Allow User Scripts** (or **Developer mode**). Tampermonkey shows a notice when it needs this.
+</Aside>
+
+</TabItem>
+<TabItem label="Enhancer for YouTube">
+
+<Steps>
+
+1. Open [retube.user.js](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js) and copy all of its text.
+2. Open the Enhancer for YouTube options and go to **Custom script**.
+3. Paste the text into the field and press **Save**.
+4. Select **Automatically execute the script when YouTube is loaded in a tab**.
+5. Reload the YouTube tabs that are already open. The script runs from the next page load.
+6. Press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> to open the settings window.
+
+</Steps>
+
+<Image src={enhancer} alt="The Custom script card in the Enhancer for YouTube options, with the Re-Tube code and the automatic run option selected" />
+
+<Aside type="caution" title="No automatic updates">
+Enhancer keeps a copy of the code. When a new Re-Tube version comes out, paste the new `retube.user.js` again and press **Save**. Your settings stay.
+</Aside>
+
+<Aside type="note" title="Security notice">
+Enhancer shows a red warning on this card. Re-Tube is open source: you can read the code on [GitHub](https://github.com/kYaRick/kya.retube) before you paste it.
+</Aside>
+
+</TabItem>
+</Tabs>
+
+## 🔄 Updates
+
+Violentmonkey and Tampermonkey check the GitHub Releases page and install new versions automatically. In Enhancer for YouTube, paste the new version by hand.
+
+## 🔀 Switch hosts
+
+All hosts keep the settings in the same place on youtube.com, so a switch keeps them. Turn off the script in the old host first, then install it in the new one.
+
+## ⬆️ Upgrade from "YouTube Classic+"
+
+Re-Tube uses the same script namespace, so Violentmonkey and Tampermonkey replace the old script. Your settings stay, because Re-Tube reads the same storage key.
+
+If you still see two scripts, disable "YouTube Classic+". Two copies on one page do not work together.
+
+## ⚙️ How it runs
+
+Re-Tube needs no special permissions (`@grant none`). It runs in the page context (`@inject-into page`) at `document-start` and keeps its settings in the `localStorage` of youtube.com.
+
+## 🧩 Browser extension
+
+A Chrome and Firefox extension is planned. See the [roadmap](../roadmap/).

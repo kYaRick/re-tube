@@ -1,0 +1,60 @@
+---
+title: Re-Tube
+description: Класичний YouTube, доведений до ладу. Userscript з класичною сторінкою відео, пресетами, вікном підписок і палітрою команд.
+template: splash
+hero:
+  title: Re-Tube
+  tagline: Класичний YouTube, доведений до ладу. Класична сторінка відео, чисті стрічки й зручні інструменти, яких YouTube так і не додав.
+  image:
+    file: ../../../assets/logo.svg
+  actions:
+    - text: Встановити
+      link: install/
+      icon: right-arrow
+    - text: Можливості
+      link: features/
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/kYaRick/kya.retube
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import settings from '../../../assets/screens/settings-dark.png';
+import watch from '../../../assets/screens/watch-dark.png';
+
+<CardGrid>
+  <Card title="Класичний макет" icon="laptop">
+    Опис і коментарі під відео, рекомендації праворуч. Без зайвих бічних панелей.
+  </Card>
+  <Card title="Пресети" icon="rocket">
+    Performance, Balanced або Beauty одним кліком, далі тонке налаштування.
+  </Card>
+  <Card title="Вікно підписок" icon="list-format">
+    Усі канали в одній сітці з пошуком, нові відео першими.
+  </Card>
+  <Card title="Палітра команд" icon="magnifier">
+    <kbd>Ctrl</kbd>+<kbd>K</kbd> знаходить будь-яке налаштування чи дію за назвою.
+  </Card>
+  <Card title="Коментарі" icon="comment">
+    Підсвітка автора, закріплених і відзначених коментарів, чипи, пошук, фільтр спаму.
+  </Card>
+  <Card title="Чисті стрічки" icon="approve-check">
+    Без Shorts, Playables та зайвих полиць. Сітка, що вміщується у вікно.
+  </Card>
+</CardGrid>
+
+## 🎬 Сторінка відео, як раніше
+
+<Image src={watch} alt="Сторінка відео з Re-Tube: коментарі під відео з підсвіткою автора і відзначених коментарів, рекомендації праворуч" />
+
+## ⚙️ Одне вікно для всього
+
+<Image src={settings} alt="Вікно налаштувань Re-Tube" />
+
+<CardGrid>
+  <LinkCard title="Налаштування" href="settings/" description="Розділи, пошук та гарячі клавіші" />
+  <LinkCard title="Пресети" href="presets/" description="Що вмикає та вимикає кожен пресет" />
+</CardGrid>
