@@ -7,7 +7,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kYaRick/kya.retube.git"
+    "url": "git+https://github.com/kYaRick/re-tube.git"
   },
   "workspaces": [
     "docs"

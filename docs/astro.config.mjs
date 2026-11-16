@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 
-// Repository root with forward slashes, e.g. C:/.git/kya.retube
+// Repository root with forward slashes, e.g. C:/.git/re-tube
 const repoRoot = fileURLToPath(new URL('..', import.meta.url))
   .replace(/\\/g, '/')
   .replace(/\/$/, '');
@@ -13,12 +13,12 @@ const repoRoot = fileURLToPath(new URL('..', import.meta.url))
 // Pages that are not translated yet fall back to English.
 export default defineConfig({
   site: 'https://kyarick.github.io',
-  base: '/kya.retube',
+  base: '/re-tube',
   vite: {
     server: {
       fs: {
         // Vite's default deny list has "**/.git/**". It matches the absolute path, so a checkout
-        // inside a folder named ".git" (C:/.git/kya.retube) blocks every file in dev.
+        // inside a folder named ".git" (C:/.git/re-tube) blocks every file in dev.
         // Same list, but .git folders are denied only inside the repository.
         deny: [
           '.env',
@@ -36,8 +36,8 @@ export default defineConfig({
       title: 'Re-Tube',
       logo: { src: './src/assets/logo.svg' },
       favicon: '/favicon.svg',
-      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kYaRick/kya.retube' }],
-      editLink: { baseUrl: 'https://github.com/kYaRick/kya.retube/edit/main/docs/' },
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/kYaRick/re-tube' }],
+      editLink: { baseUrl: 'https://github.com/kYaRick/re-tube/edit/main/docs/' },
       defaultLocale: 'root',
       locales: {
         root: { label: 'English', lang: 'en' },

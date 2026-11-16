@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import monkey from 'vite-plugin-monkey';
 import pkg from './package.json' with { type: 'json' };
 
-const repo = 'https://github.com/kYaRick/kya.retube';
+const repo = 'https://github.com/kYaRick/re-tube';
 const releaseUrl = `${repo}/releases/latest/download/retube.user.js`;
 
 export default defineConfig({
@@ -29,7 +29,7 @@ export default defineConfig({
         namespace: 'local.yt-classic-watch',
         version: pkg.version,
         description: pkg.description,
-        icon: 'https://raw.githubusercontent.com/kYaRick/kya.retube/main/assets/icons/48.png',
+        icon: 'https://raw.githubusercontent.com/kYaRick/re-tube/main/assets/icons/48.png',
         homepageURL: repo,
         supportURL: `${repo}/issues`,
         updateURL: releaseUrl,

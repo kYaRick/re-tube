@@ -15,7 +15,7 @@ YouTube changes its page often. When it does, a Re-Tube feature can stop working
 
 1. Open the settings panel (<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd>).
 2. In **Backup & diagnostics**, press **Copy diagnostics**.
-3. [Open an issue](https://github.com/kYaRick/kya.retube/issues/new?template=bug.yml) and paste the report.
+3. [Open an issue](https://github.com/kYaRick/re-tube/issues/new?template=bug.yml) and paste the report.
 
 Useful blocks in the report: `perf` (time per step), `grid` (widths and column history), `guide` and `guideEntry` (left menu structure, no channel names), `layoutShifts` (what moved on the page).
 

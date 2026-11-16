@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/kYaRick/kya.retube/actions/workflows/ci.yml"><img src="https://github.com/kYaRick/kya.retube/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="https://github.com/kYaRick/kya.retube/releases/latest"><img src="https://img.shields.io/github/v/release/kYaRick/kya.retube" alt="Release"></a>
+  <a href="https://github.com/kYaRick/re-tube/actions/workflows/ci.yml"><img src="https://github.com/kYaRick/re-tube/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/kYaRick/re-tube/releases/latest"><img src="https://img.shields.io/github/v/release/kYaRick/re-tube" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="License: GPL-3.0"></a>
 </p>
 
@@ -37,18 +37,18 @@ Re-Tube is a userscript. It runs in any of these hosts:
 
 | Host | How | Auto-update |
 | --- | --- | --- |
-| [Violentmonkey](https://violentmonkey.github.io/) | Open [`retube.user.js`](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js) and confirm | ✅ Yes |
-| [Tampermonkey](https://www.tampermonkey.net/) | Open [`retube.user.js`](https://github.com/kYaRick/kya.retube/releases/latest/download/retube.user.js) and press **Install** | ✅ Yes |
+| [Violentmonkey](https://violentmonkey.github.io/) | Open [`retube.user.js`](https://github.com/kYaRick/re-tube/releases/latest/download/retube.user.js) and confirm | ✅ Yes |
+| [Tampermonkey](https://www.tampermonkey.net/) | Open [`retube.user.js`](https://github.com/kYaRick/re-tube/releases/latest/download/retube.user.js) and press **Install** | ✅ Yes |
 | [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube) | Paste the code into **Custom script**, save, select automatic run, reload YouTube | ❌ No, paste each new version |
 
 On YouTube, press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> for settings. Turn on Re-Tube in one host only: two copies conflict.
-Step-by-step guide with screenshots: [Install](https://kyarick.github.io/kya.retube/install/).
+Step-by-step guide with screenshots: [Install](https://kyarick.github.io/re-tube/install/).
 
 Upgrading from "YouTube Classic+"? Re-Tube replaces it and keeps your settings.
 
 ## 📚 Documentation
 
-[kyarick.github.io/kya.retube](https://kyarick.github.io/kya.retube/) · [Українська](https://kyarick.github.io/kya.retube/uk/)
+[kyarick.github.io/re-tube](https://kyarick.github.io/re-tube/) · [Українська](https://kyarick.github.io/re-tube/uk/)
 
 ## 💻 Development
 
@@ -61,7 +61,7 @@ just e2e-setup   # install Playwright browsers (once)
 just ci          # lint, types, tests, build, docs
 ```
 
-See [Architecture](https://kyarick.github.io/kya.retube/dev/architecture/) before you add a feature.
+See [Architecture](https://kyarick.github.io/re-tube/dev/architecture/) before you add a feature.
 
 ## 📄 License
 

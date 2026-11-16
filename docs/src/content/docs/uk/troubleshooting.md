@@ -15,7 +15,7 @@ YouTube часто змінює структуру сторінок. Через 
 
 1. Відкрийте вікно налаштувань (<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd>).
 2. У розділі **Backup & diagnostics** натисніть **Copy diagnostics**.
-3. [Створіть звернення](https://github.com/kYaRick/kya.retube/issues/new?template=bug.yml) на GitHub та вставте скопійований звіт.
+3. [Створіть звернення](https://github.com/kYaRick/re-tube/issues/new?template=bug.yml) на GitHub та вставте скопійований звіт.
 
 Корисні блоки у звіті: `perf` (час кожного кроку), `grid` (ширина та історія колонок), `guide` і `guideEntry` (структура лівого меню без назв каналів), `layoutShifts` (зсуви елементів сторінки).
 
