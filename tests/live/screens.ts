@@ -140,8 +140,11 @@ for (const [name, dark, width] of [
 ] as const) {
   const p = await browser.newPage({ viewport: { width, height: 760 }, deviceScaleFactor: 2 });
   await open(p, dark);
-  // The mock menu is only needed by the subscriptions window; here it would show in the crop margin
-  await p.addStyleTag({ content: 'ytd-guide-renderer{visibility:hidden!important}' });
+  // The mock menu is only needed by the subscriptions window; here it would show in the crop margin.
+  // Hide the version badge so doc screenshots stay version-agnostic.
+  await p.addStyleTag({
+    content: 'ytd-guide-renderer{visibility:hidden!important}.ytc-version{display:none!important}',
+  });
   await p.keyboard.press('Alt+Shift+KeyY');
   await p.waitForTimeout(500);
   await shot(p, '.ytc-panel', `${out}/${name}.png`);
